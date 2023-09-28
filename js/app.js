@@ -14,8 +14,6 @@ payImmediatelyCheckbox.addEventListener("change", () => {
   }
 });
 
-//
-
 // accordion
 
 const basketAccordions = document.querySelectorAll(".accordion__top");

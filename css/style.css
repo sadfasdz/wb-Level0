@@ -308,6 +308,26 @@
   left: 0;
 }
 
+.tooltip-text__sale {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tooltip-text__sale-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tooltip-text__sale-title {
+  color: #a0a0a4;
+  font-size: 13px;
+}
+
+.tooltip-text__sale-text {
+  font-size: 13px;
+}
+
 .tooltip {
   z-index: 10;
   display: inline-block;
@@ -1097,13 +1117,17 @@
 }
 
 .basket__item-btns-none {
-  width: 185px;
+  width: 175px;
   justify-content: start;
 }
 
 .accordion__top-img--close {
   transition: all 0.5s ease;
   transform: rotate(180deg);
+}
+
+.fz16 {
+  font-size: 16px;
 }
 
 .header__inner-mobile {
