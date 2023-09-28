@@ -331,7 +331,7 @@ btnForm.addEventListener("click", (e) => {
   }
 
   if (valid === false) {
-    console.log("net");
+    alert("вы не прошли валидацию");
   } else {
     alert("submit");
   }
@@ -377,15 +377,9 @@ formInps.forEach((input) => {
             }
             break;
           case "mail":
-            const mails = ["@mail.ru", "@gmail.com", "@yandex.ru"];
-            let containMail = false;
-            for (let mail of mails) {
-              if (this.value.includes(mail)) {
-                containMail = true;
-                break;
-              }
-            }
-            if (containMail === false) {
+            const EMAIL_REGEXP =
+              /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+            if (!EMAIL_REGEXP.test(this.value)) {
               this.nextElementSibling.style.display = "block";
               valid = false;
 
@@ -463,15 +457,9 @@ formInps.forEach((input) => {
             }
             break;
           case "mail":
-            const mails = ["@mail.ru", "@gmail.com", "@yandex.ru"];
-            let containMail = false;
-            for (let mail of mails) {
-              if (this.value.includes(mail)) {
-                containMail = true;
-                break;
-              }
-            }
-            if (containMail === false) {
+            const EMAIL_REGEXP =
+              /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+            if (!EMAIL_REGEXP.test(this.value)) {
               this.nextElementSibling.style.display = "block";
               valid = false;
 
@@ -483,7 +471,6 @@ formInps.forEach((input) => {
               this.classList.remove("input-error");
             }
             break;
-
           default:
             break;
         }
